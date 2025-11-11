@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Kanit:wght@700&display=swap');
+
+/* Design constants */
+html {
+    
+    /* Harmonic scale */
+    --ratio: 1.4142356;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio)); /* Larger title font size */
+    --s-3: calc(var(--s-2) / var(--ratio)); /* Smaller title font size */
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem; /* table font size */
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+
+    /* white spaces */
+    --page-margin: var(--s4);
+    --vertical-space: var(--s2);
+    --menu-space: var(--s0);
+
+    /* colors */
+    --frame-color: #ccc;
+}
+/* Adjust page margin for small dislays */
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family:'Crimson Text', serif ;
+    font-size: 14pt;
+    background-color:#bbbbbb ;
+    margin: 0;
+    line-height: 1.6;
+    
+}
+header {
+        position: relative;
+        background-image: url('https://github.com/cgshep/csc8018-coursework-resources/raw/master/assets/chessboxing_background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: var(--s4) 0;
+        color: #ffffff; 
+        max-width: 90ch;
+        margin:auto;
+        padding: var(--s5) var(--page-margin);
+}
+
+
+h1, h2 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+}
+h1{
+   font-size: var(--s4);
+   margin-top: 0;
+   margin-bottom: 0;
+}   
+main{
+    max-width: 90ch;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: var(--page-margin);
+}
+
+header nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 40px;
+}
+
+nav ul{
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            justify-content: flex-end;
+            font-family: 'Kanit', sans-serif;
+        }
+nav li{
+            margin-right: var(--s2);
+        }
+ul li {
+  margin-bottom: 1rem; 
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: var(--s-2) var(--s-1);
+    display: block;
+}
+nav a:hover {
+    background-color: #fff6;
+    color: yellow;
+}
+.float-1 {
+    float: right;
+    margin-left: var(--s2);
+    margin-bottom: var(--s1);
+    width: 55%;
+    border: 5px solid #bbbbbb;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: var(--s1);
+    box-sizing: border-box;
+}
+.float-1 img {
+    width: 100%;          
+    height: auto;          
+}
+.float-2 {
+    float: right;
+    margin-left: var(--s2);
+    margin-bottom: var(--s1);
+    width: 55%;
+    border: 5px solid #bbbbbb;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: var(--s1);
+    box-sizing: border-box;
+}
+.float-2 iframe {
+    width: 100%;          
+    height: auto;  
+    aspect-ratio: 16 / 9;        
+}
+
+.timeline{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px solid #bbbbbb;
+    border-radius: 15px;
+    padding: var(--s2);
+    margin: var(--s2) 0;
+     gap: var(--s2);
+}
+.timeline figcaption {
+    flex-basis: 100%;
+   font-style: italic;
+    text-align: center;
+    font-size: var(--s1);
+    margin-bottom: var(--s1);
+}
+.timeline img{
+    width: 45%;          
+    height: auto;
+    display: block;
+
+}
+.timeline table {
+    flex: 2;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: var(--s-1);
+    align-self: center;
+}
+    
+.timeline table th,
+.timeline table td {
+    border: none;
+    border-bottom: 1px solid var(--frame-color);
+    padding: var(--s-1) var(--s0);
+    text-align: left;
+}
+
+
+.history{
+    background-color: #ffffff;
+}
+.history::before {
+    content: "\2655";
+    background-color: #ffffff;
+    margin-right: var(--s-5);
+    font-size: 3em;
+}
+
+.rules {
+   background-color: #ffffff;
+}
+.rules::before {
+    content: "\265a";
+    background-color: #ffffff;
+    margin-right: var(--s-5);
+    font-size: 3em;
+}
+.training {
+    background-color: #ffffff;
+}
+.training::before {
+    content: "\2656";
+    background-color: #ffffff;
+    margin-right: var(--s-5);
+    font-size: 3em;
+}
+
+.man-versus-machine {
+    background-color: #ffffff;
+}
+.man-versus-machine::before {
+    content: "\265d";
+    background-color: #ffffff;
+    margin-right: var(--s-5);
+    font-size: 3em;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: var(--s2) var(--s0);
+    font-family: 'Crimson Text', serif;
+    margin: auto;
+    max-width: 90ch;
+    box-sizing: border-box;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #3399ff
+}
+
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --page-margin: var(--s-2);
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.1rem;
+        padding-left: 0;
+        margin: 0;
+    }
+    header nav {
+        position: static;
+        margin-top: var(--s-2);
+    }
+    header {
+        background-image: url('https://github.com/cgshep/csc8018-coursework-resources/raw/master/assets/chessboxing_background.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        padding: var(--s2) var(--s-1);
+        min-height: var(--s1);
+        height: auto;
+        display: block;
+    }
+    header h1 {
+        text-align: left;
+        font-size: var(--s2);
+        margin-bottom: var(--s-2);
+    }
+    nav li {
+        margin: 0;
+        padding: 0;
+        line-height: 0.5;
+    }
+    nav ul li {
+       margin: 0;
+       padding: 0 ;
+       line-height: 1.8;   
+       list-style: none;
+}
+    nav a {
+        font-size: 1rem;
+        padding: 0.1rem 0;
+        display: inline-block;
+        line-height: 0.8;
+    }
+    main {
+        padding: var(--s-1);
+    }
+    .float-1 {
+        float: none;
+        display: block;
+        margin: var(--s1) auto; 
+        text-align: center;
+        max-width: 100%;
+    }
+    .float-1 img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto var(--s-1);
+    }
+    .float-2 {
+        float: none;
+        display: block;
+        margin: var(--s1) auto; 
+        text-align: center;
+        max-width: 100%;
+    }
+    .float-2 img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto var(--s-1)
+    }
+    
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline img {
+         float: none;
+         display: block;
+         margin: 1rem auto;
+         max-width: 100%;
+         height: auto;
+    }
+    .timeline table {
+        width: 100%;
+    }
+}
+
+
+/*** Page layout **********************************************************************************/
+
+
